@@ -1,8 +1,14 @@
- package com.cognizant.springtestingproject.model;
+package com.cognizant.springtestingproject.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class User {
 
+    @Id
     private Long id;
+
     private String name;
 
     public User() {
