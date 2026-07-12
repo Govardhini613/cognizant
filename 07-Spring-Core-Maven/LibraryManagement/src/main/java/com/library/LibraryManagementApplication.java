@@ -1,8 +1,10 @@
 package com.library;
 
-import com.library.service.BookService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.library.repository.BookRepository;
+import com.library.service.BookService;
 
 public class LibraryManagementApplication {
 
@@ -11,9 +13,12 @@ public class LibraryManagementApplication {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        BookService service =
-                context.getBean("bookService", BookService.class);
+        BookService service = context.getBean(BookService.class);
+        BookRepository repository = context.getBean(BookRepository.class);
+
+        System.out.println("Spring IoC Container Initialized Successfully");
 
         service.display();
+        repository.display();
     }
 }
