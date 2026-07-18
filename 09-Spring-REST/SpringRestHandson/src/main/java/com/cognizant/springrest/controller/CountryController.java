@@ -1,7 +1,8 @@
 package com.cognizant.springrest.controller;
 
 import java.util.List;
-
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,4 +24,9 @@ public class CountryController {
 public Country getCountry(@PathVariable String code) {
     return countryService.getCountry(code);
 }
+    @PostMapping("/country")
+public Country addCountry(@RequestBody Country country) {
+    return country;
+}
+
 }
