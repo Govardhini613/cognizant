@@ -20,4 +20,14 @@ public class CountryService {
 
         return countries;
     }
+    public Country getCountry(String code) {
+
+    for (Country country : getAllCountries()) {
+        if (country.getCode().equalsIgnoreCase(code)) {
+            return country;
+        }
+    }
+
+    return null;
+}
 }
