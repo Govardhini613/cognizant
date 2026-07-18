@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PathVariable;
 import com.cognizant.springrest.model.Country;
 import com.cognizant.springrest.service.CountryService;
+import org.springframework.web.bind.annotation.PutMapping;
 
 @RestController
 public class CountryController {
@@ -26,6 +27,10 @@ public Country getCountry(@PathVariable String code) {
 }
     @PostMapping("/country")
 public Country addCountry(@RequestBody Country country) {
+    return country;
+}
+@PutMapping("/country")
+public Country updateCountry(@RequestBody Country country) {
     return country;
 }
 
