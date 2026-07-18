@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.cognizant.springrest.model.Country;
 import com.cognizant.springrest.service.CountryService;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 @RestController
 public class CountryController {
@@ -32,6 +33,10 @@ public Country addCountry(@RequestBody Country country) {
 @PutMapping("/country")
 public Country updateCountry(@RequestBody Country country) {
     return country;
+}
+    @DeleteMapping("/country/{code}")
+public String deleteCountry(@PathVariable String code) {
+    return "Deleted Country : " + code;
 }
 
 }
