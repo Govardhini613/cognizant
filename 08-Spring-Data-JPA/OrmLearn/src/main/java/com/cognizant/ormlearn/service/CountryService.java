@@ -13,15 +13,16 @@ public class CountryService {
 
     @Autowired
     private CountryRepository countryRepository;
-
+    public List<Country> searchCountry(String text) {
+    return countryRepository.searchCountry(text);
+}
     public List<Country> getAllCountries() {
         return countryRepository.findAll();
     }
 
-    public Country getCountry(String code) {
-        return countryRepository.findById(code).orElse(null);
-    }
-
+     public Country getCountry(String code) {
+    return countryRepository.getCountry(code);
+}
     public Country addCountry(Country country) {
         return countryRepository.save(country);
     }

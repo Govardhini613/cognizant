@@ -12,5 +12,8 @@ import com.cognizant.ormlearn.model.Country;
 public interface CountryRepository extends JpaRepository<Country, String> {
 
     List<Country> findByNameContainingIgnoreCase(String name);
-
+    @Query("SELECT c FROM Country c WHERE c.code = :code")
+Country getCountry(@Param("code") String code);
+@Query("SELECT c FROM Country c WHERE c.name LIKE %:text%")
+List<Country> searchCountry(@Param("text") String text);
 }
