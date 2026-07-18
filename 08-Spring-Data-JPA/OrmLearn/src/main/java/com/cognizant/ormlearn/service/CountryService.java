@@ -17,4 +17,24 @@ public class CountryService {
     public List<Country> getAllCountries() {
         return countryRepository.findAll();
     }
+
+    public Country getCountry(String code) {
+        return countryRepository.findById(code).orElse(null);
+    }
+
+    public Country addCountry(Country country) {
+        return countryRepository.save(country);
+    }
+
+    public Country updateCountry(Country country) {
+        return countryRepository.save(country);
+    }
+
+    public void deleteCountry(String code) {
+        countryRepository.deleteById(code);
+    }
+
+    public List<Country> searchCountries(String name) {
+        return countryRepository.findByNameContainingIgnoreCase(name);
+    }
 }
