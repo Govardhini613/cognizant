@@ -16,14 +16,8 @@ public class OrmLearnApplication implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication.run(OrmLearnApplication.class, args);
     }
-   	  @Override
-public void run(String... args) throws Exception {
-
-    Country country = new Country("JP", "Japan Updated");
-
-    countryService.updateCountry(country);
-
-    System.out.println(countryService.getCountry("JP"));
-
+   	     @Override
+public void run(String... args) {
+    System.out.println(countryService.getCountry("IN"));
 }
 }
