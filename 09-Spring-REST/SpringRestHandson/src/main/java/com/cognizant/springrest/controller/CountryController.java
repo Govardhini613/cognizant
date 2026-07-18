@@ -1,15 +1,22 @@
 package com.cognizant.springrest.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cognizant.springrest.model.Country;
+import com.cognizant.springrest.service.CountryService;
 
 @RestController
 public class CountryController {
 
-    @GetMapping("/country")
-    public Country getCountry() {
-        return new Country("IN", "India");
+    @Autowired
+    private CountryService countryService;
+
+    @GetMapping("/countries")
+    public List<Country> getCountries() {
+        return countryService.getAllCountries();
     }
 }
