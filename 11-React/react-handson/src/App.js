@@ -1,9 +1,9 @@
-import Counter from "./components/Counter";
+import ButtonClick from "./components/ButtonClick";
 
 function App() {
   return (
     <div>
-      <Counter />
+      <ButtonClick />
     </div>
   );
 }
