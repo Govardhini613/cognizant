@@ -1,7 +1,10 @@
+import Welcome from "./components/Welcome";
+
 function App() {
   return (
     <div>
-      <h1>Welcome to React</h1>
+      <h1>React Hands-on 2</h1>
+      <Welcome />
     </div>
   );
 }
