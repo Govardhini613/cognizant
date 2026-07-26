@@ -1,13 +1,9 @@
-import Employee from "./components/Employee";
+import Counter from "./components/Counter";
 
 function App() {
   return (
     <div>
-      <Employee
-        id="101"
-        name="Govardhini"
-        department="Iformation Technology"
-      />
+      <Counter />
     </div>
   );
 }
