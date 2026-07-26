@@ -1,10 +1,13 @@
-import Welcome from "./components/Welcome";
+import Employee from "./components/Employee";
 
 function App() {
   return (
     <div>
-      <h1>React Hands-on 2</h1>
-      <Welcome />
+      <Employee
+        id="101"
+        name="Govardhini"
+        department="Iformation Technology"
+      />
     </div>
   );
 }
