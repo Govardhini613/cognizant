@@ -1,6 +1,6 @@
-function BookDetails(){
+function BookDetails() {
 
-const books=[
+const books = [
 
 {id:1,name:"React Guide",price:450},
 
@@ -18,9 +18,7 @@ return(
 
 <ul>
 
-{
-
-books.map(book=>
+{books.map(book=>
 
 <li key={book.id}>
 
@@ -28,9 +26,7 @@ books.map(book=>
 
 </li>
 
-)
-
-}
+)}
 
 </ul>
 

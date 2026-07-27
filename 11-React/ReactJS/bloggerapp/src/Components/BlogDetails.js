@@ -18,9 +18,7 @@ return(
 
 <ul>
 
-{
-
-blogs.map(blog=>
+{blogs.map(blog=>
 
 <li key={blog.id}>
 
@@ -28,9 +26,7 @@ blogs.map(blog=>
 
 </li>
 
-)
-
-}
+)}
 
 </ul>
 

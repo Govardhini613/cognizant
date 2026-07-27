@@ -18,9 +18,7 @@ return(
 
 <ul>
 
-{
-
-courses.map(course=>
+{courses.map(course=>
 
 <li key={course.id}>
 
@@ -28,9 +26,7 @@ courses.map(course=>
 
 </li>
 
-)
-
-}
+)}
 
 </ul>
 
