@@ -15,9 +15,11 @@ public class OrmLearnApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(OrmLearnApplication.class, args);
-    }
-   	     @Override
+    } 
+	@Override
 public void run(String... args) {
-    System.out.println(countryService.getCountry("IN"));
+
+    System.out.println(countryService.searchCountry("Ind"));
+
 }
 }
