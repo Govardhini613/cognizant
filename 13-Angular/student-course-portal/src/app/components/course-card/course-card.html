@@ -1,0 +1,23 @@
+<div
+  style="border:1px solid black;
+         padding:10px;
+         margin:10px;">
+
+<h3>{{course.name}}</h3>
+
+<p>Code : {{course.code}}</p>
+
+<p>Credits : {{course.credits}}</p>
+
+<p
+  [ngStyle]="{
+    color: course.credits >= 4
+      ? 'green'
+      : 'red'
+  }">
+
+Credits Status
+
+</p>
+
+</div>

@@ -1,0 +1,31 @@
+<h2>Reactive Form</h2>
+
+<form [formGroup]="registerForm" (ngSubmit)="submit()">
+
+  <input
+    placeholder="Name"
+    formControlName="name">
+
+  <br><br>
+
+  <input
+    placeholder="Email"
+    formControlName="email">
+
+  <br><br>
+
+  <input
+    placeholder="Course"
+    formControlName="course">
+
+  <br><br>
+
+  <button
+    type="submit"
+    [disabled]="registerForm.invalid">
+
+    Submit
+
+  </button>
+
+</form>
